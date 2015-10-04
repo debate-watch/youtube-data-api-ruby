@@ -24,7 +24,7 @@ Parse Youtube data.
 
 channel_url = "https://www.youtube.com/user/CSPAN"
 channel_data = YoutubeDataReader.channel(channel_url)
-playlists_data = YoutubeDataReader::playlists(channel_url)
+playlists_data = YoutubeDataReader::channel_playlists(channel_url)
 
 #
 # Parse playlist data.
