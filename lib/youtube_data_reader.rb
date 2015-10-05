@@ -9,7 +9,8 @@ module YoutubeDataReader
   # @example YoutubeDataReader.channel("https://www.youtube.com/user/CSPAN")
   #
   def self.channel(channel_url)
-    #code
+    puts channel_url
+    return {}
   end
 
   # List channel playlists.
@@ -19,7 +20,8 @@ module YoutubeDataReader
   # @example YoutubeDataReader.channel_playlists("https://www.youtube.com/user/CSPAN")
   #
   def self.channel_playlists(channel_url)
-    #code
+    puts channel_url
+    return []
   end
 
   # Get playlist.
@@ -29,7 +31,8 @@ module YoutubeDataReader
   # @example YoutubeDataReader.playlist("https://www.youtube.com/playlist?list=PLf0o4wbW8SXqTSo6iJkolKCKJYBnpo9NZ")
   #
   def self.playlist(playlist_url)
-    #code
+    puts playlist_url
+    return {}
   end
 
   # List playlist items (videos).
@@ -39,7 +42,8 @@ module YoutubeDataReader
   # @example YoutubeDataReader.playlist_items("https://www.youtube.com/playlist?list=PLf0o4wbW8SXqTSo6iJkolKCKJYBnpo9NZ")
   #
   def self.playlist_items(playlist_url)
-    #code
+    puts playlist_url
+    return []
   end
 
   # Get video.
@@ -49,6 +53,7 @@ module YoutubeDataReader
   # @example YoutubeDataReader.video("https://www.youtube.com/watch?v=oBM7DIeMsP0")
   #
   def self.video(video_url)
-    #code
+    puts video_url
+    return {}
   end
 end

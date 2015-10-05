@@ -4,7 +4,7 @@ A ruby library for parsing data from the [YouTube Data API](https://developers.g
 
 ## Installation
 
-```` sh
+```` rb
 gem install youtube_data_reader
 ````
 
@@ -17,29 +17,16 @@ Or install with bundler
 Parse Youtube data.
 
 ```` rb
-
-#
-# Parse channel data.
-#
-
 channel_url = "https://www.youtube.com/user/CSPAN"
 channel_data = YoutubeDataReader.channel(channel_url)
 playlists_data = YoutubeDataReader::channel_playlists(channel_url)
-
-#
-# Parse playlist data.
-#
 
 playlist_url = "https://www.youtube.com/playlist?list=PLf0o4wbW8SXqTSo6iJkolKCKJYBnpo9NZ"
 playlist_data = YoutubeDataReader.playlist(playlist_url)
 playlist_items_data = YoutubeDataReader::playlist_items(playlist_url)
 
-#
-# Parse video data.
-#
-
 video_url = "https://www.youtube.com/watch?v=oBM7DIeMsP0"
-YoutubeDataReader.video(video_url)
+video_data = YoutubeDataReader.video(video_url)
 ````
 
 ## Development
