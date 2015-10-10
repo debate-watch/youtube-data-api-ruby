@@ -1,15 +1,15 @@
-# YoutubeDataReader
+# YoutubeDataApi
 
 A ruby library for parsing data from the [YouTube Data API](https://developers.google.com/youtube/v3/docs/). Parses channels, playlists, and videos.
 
 ## Installation
 
 ```` rb
-gem install youtube_data_reader
+gem install youtube_data_api
 ````
 
 Or install with bundler
- by adding `gem youtube_data_reader` to your application's Gemfile
+ by adding `gem youtube_data_api` to your application's Gemfile
  before performing a `bundle install`.
 
 ## Usage
@@ -18,15 +18,15 @@ Parse Youtube data.
 
 ```` rb
 channel_url = "https://www.youtube.com/user/CSPAN"
-channel_data = YoutubeDataReader.channel(channel_url)
-playlists_data = YoutubeDataReader::channel_playlists(channel_url)
+channel_data = YoutubeDataApi.channel(channel_url)
+playlists_data = YoutubeDataApi::channel_playlists(channel_url)
 
 playlist_url = "https://www.youtube.com/playlist?list=PLf0o4wbW8SXqTSo6iJkolKCKJYBnpo9NZ"
-playlist_data = YoutubeDataReader.playlist(playlist_url)
-playlist_items_data = YoutubeDataReader::playlist_items(playlist_url)
+playlist_data = YoutubeDataApi.playlist(playlist_url)
+playlist_items_data = YoutubeDataApi::playlist_items(playlist_url)
 
 video_url = "https://www.youtube.com/watch?v=oBM7DIeMsP0"
-video_data = YoutubeDataReader.video(video_url)
+video_data = YoutubeDataApi.video(video_url)
 ````
 
 ## Development
@@ -37,7 +37,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Browse existing [issues](https://github.com/data-creative/youtube-data-reader-ruby/issues) or create a new issue to communicate bugs, desired features, etc.
+Browse existing [issues](https://github.com/data-creative/youtube-data-api-ruby/issues) or create a new issue to communicate bugs, desired features, etc.
 
 After forking the repo and pushing your changes, create a pull request referencing the applicable issue(s).
 

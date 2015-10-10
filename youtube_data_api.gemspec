@@ -1,17 +1,17 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'youtube_data_reader/version'
+require 'youtube_data_api/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "youtube_data_reader"
-  spec.version       = YoutubeDataReader::VERSION
+  spec.name          = "youtube_data_api"
+  spec.version       = YoutubeDataApi::VERSION
   spec.authors       = ["MJ Rossetti (@s2t2)"]
   spec.email         = ["s2t2mail+git@gmail.com"]
 
   spec.summary       = %q{A ruby library for parsing data from the YouTube Data API.}
   spec.description   = %q{A ruby library for parsing data from the YouTube Data API. Parses channels, playlists, and videos.}
-  spec.homepage      = "https://github.com/data-creative/youtube-data-reader-ruby"
+  spec.homepage      = "https://github.com/data-creative/youtube-data-api-ruby"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
