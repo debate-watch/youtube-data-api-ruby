@@ -97,7 +97,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Browse existing [issues](https://github.com/data-creative/youtube-data-api-ruby/issues) or create a new issue to communicate bugs, desired features, etc.
+Browse existing [issues](https://github.com/debate-watch/youtube-data-api-ruby/issues) or create a new issue to communicate bugs, desired features, etc.
 
 After forking the repo and pushing your changes, create a pull request referencing the applicable issue(s).
 
@@ -111,7 +111,7 @@ Run `rake rspec` or `bundle exec rspec spec/` to run the tests.
 
 Optionally run `bin/console` for an interactive prompt that will allow you to experiment.
 
-FYI - the tests expect you to use the [environment variable approach](#environment-variable) when specifying your YouTube API Key.
+FYI - the tests expect you to use the [environment variable configuration approach](#environment-variable) to specifying your YouTube API Key.
 
 ### Releasing
 
