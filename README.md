@@ -1,6 +1,6 @@
 # YoutubeDataApi
 
-A ruby library for parsing data from the [YouTube Data API](https://developers.google.com/youtube/v3/docs/). Parses channels, playlists, and videos.
+A ruby library for parsing data from the [YouTube Data API](https://developers.google.com/youtube/v3/docs/). Parses channel, playlist, and video data.
 
 ## Installation
 
@@ -18,43 +18,27 @@ Parse Youtube data.
 
 ```` rb
 
-#
 # CHANNELS
-#
 
 channel_url = "https://www.youtube.com/user/CSPAN"
 
-# /channel/:id
+YoutubeDataApi.channel(channel_url)
 
-channel_data = YoutubeDataApi.channel(channel_url)
+YoutubeDataApi.channel_playlists(channel_url)
 
-# /channel/:id/playlists
-
-playlists_data = YoutubeDataApi::channel_playlists(channel_url)
-
-#
 # PLAYLISTS
-#
 
 playlist_url = "https://www.youtube.com/playlist?list=PLf0o4wbW8SXqTSo6iJkolKCKJYBnpo9NZ"
 
-# /playlist/:id
+YoutubeDataApi.playlist(playlist_url)
 
-playlist_data = YoutubeDataApi.playlist(playlist_url)
+YoutubeDataApi.playlist_items(playlist_url)
 
-# /playlist/:id/items
-
-playlist_items_data = YoutubeDataApi::playlist_items(playlist_url)
-
-#
 # VIDEOS
-#
 
 video_url = "https://www.youtube.com/watch?v=oBM7DIeMsP0"
 
-# /video/:id
-
-video_data = YoutubeDataApi.video(video_url)
+YoutubeDataApi.video(video_url)
 ````
 
 ### Prerequisites
@@ -80,11 +64,16 @@ for more support.
 
 ### Configuration
 
-Configure the library to make requests on behalf of your YouTube API Key by either assigning it to an environment variable called `YOUTUBE_DATA_API_KEY` or passing it as a request parameter called `:api_key`.
+Configure the library
+ to make requests on behalf of your YouTube API Key
+ by
+   assigning it to an environment variable or
+   passing it as a request parameter.
 
 #### Environment Variable
 
-If using the environment variable approach, add the YouTube API Key to your **.bash_profile**:
+If using the environment variable configuration approach,
+ add a variable called `YOUTUBE_DATA_API_KEY` to your **.bash_profile**:
 
 ```` sh
 export YOUTUBE_DATA_API_KEY="my-key-123"
@@ -92,12 +81,12 @@ export YOUTUBE_DATA_API_KEY="my-key-123"
 
 #### Request Parameter
 
-Alternatively, you may use the request parameter approach:
+If using the request parameter configuration approach, pass the `:api_key` parameter to any request:
 
 ```` rb
 channel_url = "https://www.youtube.com/user/CSPAN"
 options = {:api_key => "my-key-123"}
-channel_data = YoutubeDataApi.channel(channel_url, options)
+YoutubeDataApi.channel(channel_url, options)
 ````
 
 ## Development

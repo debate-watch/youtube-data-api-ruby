@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
   spec.email         = ["s2t2mail+git@gmail.com"]
 
   spec.summary       = %q{A ruby library for parsing data from the YouTube Data API.}
-  spec.description   = %q{A ruby library for parsing data from the YouTube Data API. Parses channels, playlists, and videos.}
-  spec.homepage      = "https://github.com/data-creative/youtube-data-api-ruby"
+  spec.description   = %q{A ruby library for parsing data from the YouTube Data API. Parses channel, playlist, and video data.}
+  spec.homepage      = "https://github.com/debate-watch/youtube-data-api-ruby"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
