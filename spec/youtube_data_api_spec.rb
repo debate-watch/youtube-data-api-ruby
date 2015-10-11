@@ -32,7 +32,8 @@ describe YoutubeDataApi do
 
     it 'parses playlist items' do
       data = YoutubeDataApi.playlist_items(playlist_url)
-      expect(data).to be_kind_of(Array)
+      expect(data["kind"]).to eql("youtube#playlistItemListResponse")
+      expect(data["items"].first["kind"]).to eql("youtube#playlistItem")
     end
   end
 

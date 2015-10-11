@@ -165,23 +165,15 @@ module YoutubeDataApi
     result = JSON.parse(response.data.to_json)
   end
 
+  PLAYLIST_ITEM_PARTS = "id, contentDetails, snippet, status"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  #PLAYLIST_ITEM_PARTS = "id, contentDetails, snippet, status"
-
+  def self.playlist_items_request_params(playlist_url, options)
+    {
+      :part => options[:part] || PLAYLIST_ITEM_PARTS,
+      :pageToken => options[:page_token],
+      :playlistId => self.playlist_id(playlist_url) #todo: obviate this call if playlist_id param is present...,
+    }
+  end
 
   # List playlist items (videos).
   #
@@ -196,8 +188,12 @@ module YoutubeDataApi
   # @example YoutubeDataApi.playlist_items("https://www.youtube.com/playlist?list=PLf0o4wbW8SXqTSo6iJkolKCKJYBnpo9NZ")
   #
   def self.playlist_items(playlist_url, options = {})
-    puts playlist_url
-    return []
+    client, youtube_api = self.initialize_service(options)
+    response = client.execute(
+      :api_method => youtube_api.playlist_items.list,
+      :parameters => self.playlist_items_request_params(playlist_url, options)
+    )
+    result = JSON.parse(response.data.to_json)
   end
 
 
