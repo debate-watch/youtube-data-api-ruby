@@ -42,7 +42,6 @@ describe YoutubeDataApi do
 
     it 'parses a video' do
       data = YoutubeDataApi.video(video_url)
-      binding.pry
       expect(data["kind"]).to eql("youtube#videoListResponse")
       expect(data["items"].first["kind"]).to eql("youtube#video")
     end
