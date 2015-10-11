@@ -2,7 +2,33 @@ require 'google/api_client'
 
 require "youtube_data_api/version"
 
+# todo: refactor!
+
 module YoutubeDataApi
+
+  def self.initialize_service(options)
+    client = Google::APIClient.new(
+      :key => options[:api_key] || ENV['YOUTUBE_DATA_API_KEY'] || "my-key-123",
+      :application_name => options[:app_name] || "my-app",
+      :application_version => options[:app_version] || "0.0.1"
+    )
+    client.authorization = nil
+    youtube_api = client.discovered_api('youtube', 'v3')
+    return client, youtube_api
+  end
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   #
   # CHANNELS
@@ -31,7 +57,7 @@ module YoutubeDataApi
 
   # Get channel (user).
   #
-  # @param [String] channel_url "https://www.youtube.com/user/CSPAN"
+  # @param [String] channel_url "https://www.youtube.com/user/CSPAN" The url representing a specific youtube channel or user.
   # @param [Hash] options
   # @param [Hash] options [String] api_key
   # @param [Hash] options [String] app_name
@@ -42,62 +68,48 @@ module YoutubeDataApi
   # @example YoutubeDataApi.channel("https://www.youtube.com/user/CSPAN")
   #
   def self.channel(channel_url, options = {})
-
-    # Initialize new Google API Client.
-
-    client = Google::APIClient.new(
-      :key => options[:api_key] || ENV['YOUTUBE_DATA_API_KEY'] || "my-key-123",
-      :application_name => options[:app_name] || "my-app",
-      :application_version => options[:app_version] || "0.0.1"
-    )
-    client.authorization = nil
-    youtube_api = client.discovered_api('youtube', 'v3')
-
-    # Request a response from the Google API Client.
-
+    client, youtube_api = self.initialize_service(options)
     response = client.execute(
       :api_method => youtube_api.channels.list,
       :parameters => self.channel_request_params(channel_url, options)
-    ) #> Google::APIClient::Result
-
-    # Parse response.
-
-    result = JSON.parse(response.data.to_json) #> [{}]
+    )
+    result = JSON.parse(response.data.to_json)
   end
 
+  PLAYLIST_PARTS = "id, contentDetails, player, snippet, status"
 
+  def self.channel_id(channel_url)
+    channel_response = self.channel(channel_url)
+    channel_response["items"].first["id"]
+  end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  def self.channel_playlists_request_params(channel_url, options)
+    {
+      :part => options[:request_parts] || PLAYLIST_PARTS,
+      :pageToken => options[:page_token],
+      :channelId => self.channel_id(channel_url) #todo: obviate this call if channel_id param is present...
+    }
+  end
 
   # List channel playlists.
   #
-  # @param [String] channel_url "https://www.youtube.com/user/CSPAN"
+  # @param [String] channel_url "https://www.youtube.com/user/CSPAN" The url representing a specific youtube channel or user.
+  # @param [Hash] options
+  # @param [Hash] options [String] api_key
+  # @param [Hash] options [String] app_name
+  # @param [Hash] options [String] app_version
+  # @param [Hash] options [String] request_parts A comma separated string of response parts which you would like to request. Limit api usage by only requesting the parts you need.
+  # @param [Hash] options [String] page_token
   #
   # @example YoutubeDataApi.channel_playlists("https://www.youtube.com/user/CSPAN")
   #
-  def self.channel_playlists(channel_url)
-    puts channel_url
-    return []
+  def self.channel_playlists(channel_url, options = {})
+    client, youtube_api = self.initialize_service(options)
+    response = client.execute(
+      :api_method => youtube_api.playlists.list,
+      :parameters => self.channel_playlists_request_params(channel_url, options)
+    )
+    result = JSON.parse(response.data.to_json)
   end
 
 
@@ -122,25 +134,60 @@ module YoutubeDataApi
 
   # Get playlist.
   #
-  # @param [String] playlist_url "https://www.youtube.com/playlist?list=PLf0o4wbW8SXqTSo6iJkolKCKJYBnpo9NZ"
+  # @param [String] playlist_url "https://www.youtube.com/playlist?list=PLf0o4wbW8SXqTSo6iJkolKCKJYBnpo9NZ" The url representing a specific youtube playlist.
+  # @param [Hash] options
+  # @param [Hash] options [String] api_key
+  # @param [Hash] options [String] app_name
+  # @param [Hash] options [String] app_version
+  # @param [Hash] options [String] request_parts A comma separated string of response parts which you would like to request. Limit api usage by only requesting the parts you need.
+  # @param [Hash] options [String] page_token
   #
   # @example YoutubeDataApi.playlist("https://www.youtube.com/playlist?list=PLf0o4wbW8SXqTSo6iJkolKCKJYBnpo9NZ")
   #
-  def self.playlist(playlist_url)
+  def self.playlist(playlist_url, options = {})
     puts playlist_url
     return {}
   end
 
   # List playlist items (videos).
   #
-  # @param [String] playlist_url "https://www.youtube.com/playlist?list=PLf0o4wbW8SXqTSo6iJkolKCKJYBnpo9NZ"
+  # @param [String] playlist_url "https://www.youtube.com/playlist?list=PLf0o4wbW8SXqTSo6iJkolKCKJYBnpo9NZ" The url representing a specific youtube playlist.
+  # @param [Hash] options
+  # @param [Hash] options [String] api_key
+  # @param [Hash] options [String] app_name
+  # @param [Hash] options [String] app_version
+  # @param [Hash] options [String] request_parts A comma separated string of response parts which you would like to request. Limit api usage by only requesting the parts you need.
+  # @param [Hash] options [String] page_token
   #
   # @example YoutubeDataApi.playlist_items("https://www.youtube.com/playlist?list=PLf0o4wbW8SXqTSo6iJkolKCKJYBnpo9NZ")
   #
-  def self.playlist_items(playlist_url)
+  def self.playlist_items(playlist_url, options = {})
     puts playlist_url
     return []
   end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   #
   # VIDEOS
@@ -151,11 +198,17 @@ module YoutubeDataApi
 
   # Get video.
   #
-  # @param [String] video_url "https://www.youtube.com/watch?v=oBM7DIeMsP0"
+  # @param [String] video_url "https://www.youtube.com/watch?v=oBM7DIeMsP0" The url representing a specific youtube video.
+  # @param [Hash] options
+  # @param [Hash] options [String] api_key
+  # @param [Hash] options [String] app_name
+  # @param [Hash] options [String] app_version
+  # @param [Hash] options [String] request_parts A comma separated string of response parts which you would like to request. Limit api usage by only requesting the parts you need.
+  # @param [Hash] options [String] page_token
   #
   # @example YoutubeDataApi.video("https://www.youtube.com/watch?v=oBM7DIeMsP0")
   #
-  def self.video(video_url)
+  def self.video(video_url, options = {})
     puts video_url
     return {}
   end

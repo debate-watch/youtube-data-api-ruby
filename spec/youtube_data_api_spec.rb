@@ -10,19 +10,14 @@ describe YoutubeDataApi do
 
     it 'parses a channel' do
       data = YoutubeDataApi.channel(channel_url)
-      #expect(data).to be_kind_of(Hash)
       expect(data["kind"]).to eql("youtube#channelListResponse")
-      #expect(data["etag"]).to be_kind_of(String)
-      #expect(data["pageInfo"]).to be_kind_of(Hash)
-      #expect(data["pageInfo"]["totalResults"]).to be_greater_or_equal_to(0)
-      #expect(data["pageInfo"]["resultsPerPage"]).to be_greater_or_equal_to(0)
-      #expect(data["items"]).to be_kind_of(Array)
       expect(data["items"].first["kind"]).to eql("youtube#channel")
     end
 
     it 'parses channel playlists' do
       data = YoutubeDataApi.channel_playlists(channel_url)
-      expect(data).to be_kind_of(Array)
+      expect(data["kind"]).to eql("youtube#playlistListResponse")
+      expect(data["items"].first["kind"]).to eql("youtube#playlist")
     end
   end
 
