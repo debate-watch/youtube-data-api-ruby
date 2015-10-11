@@ -9,7 +9,7 @@ gem install youtube_data_api
 ````
 
 If using bundler:
- add `gem youtube_data_api, '~> 3.0'` to the Gemfile,
+ add `gem 'youtube_data_api', '~> 3.0'` to the Gemfile,
  then run `bundle install`.
 
 ## Usage
