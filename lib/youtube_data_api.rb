@@ -17,19 +17,6 @@ module YoutubeDataApi
     return client, youtube_api
   end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   #
   # CHANNELS
   #
@@ -112,20 +99,6 @@ module YoutubeDataApi
     result = JSON.parse(response.data.to_json)
   end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   #
   # PLAYLISTS
   #
@@ -196,35 +169,25 @@ module YoutubeDataApi
     result = JSON.parse(response.data.to_json)
   end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   #
   # VIDEOS
   #
 
-  #VIDEO_PARTS = "id, contentDetails, liveStreamingDetails, player, recordingDetails, snippet, statistics, status, topicDetails"
+  VIDEO_URL_PREFIX = "https://www.youtube.com/watch?v="
+  VIDEO_PARTS = "id, contentDetails, liveStreamingDetails, player, recordingDetails, snippet, statistics, status, topicDetails"
   #VIDEO_PRIVATE_PARTS = "fileDetails, processingDetails, suggestions" # :-) can't request these unless authenticated
+
+  def self.video_id(video_url)
+    video_url.gsub(VIDEO_URL_PREFIX,'')
+  end
+
+  def self.video_request_params(video_url, options)
+    {
+      :part => options[:part] || VIDEO_PARTS,
+      :pageToken => options[:page_token],
+      :id => self.video_id(video_url) #todo: obviate this call if video_id param is present...,
+    }
+  end
 
   # Get video.
   #
@@ -239,7 +202,11 @@ module YoutubeDataApi
   # @example YoutubeDataApi.video("https://www.youtube.com/watch?v=oBM7DIeMsP0")
   #
   def self.video(video_url, options = {})
-    puts video_url
-    return {}
+    client, youtube_api = self.initialize_service(options)
+    response = client.execute(
+      :api_method => youtube_api.videos.list,
+      :parameters => self.video_request_params(video_url, options)
+    )
+    result = JSON.parse(response.data.to_json)
   end
 end

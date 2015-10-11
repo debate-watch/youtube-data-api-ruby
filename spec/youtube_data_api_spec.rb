@@ -42,7 +42,9 @@ describe YoutubeDataApi do
 
     it 'parses a video' do
       data = YoutubeDataApi.video(video_url)
-      expect(data).to be_kind_of(Hash)
+      binding.pry
+      expect(data["kind"]).to eql("youtube#videoListResponse")
+      expect(data["items"].first["kind"]).to eql("youtube#video")
     end
   end
 end
