@@ -1,102 +1,122 @@
-{"kind"=>"youtube#playlistItemListResponse",
- "etag"=>"\"oyKLwABI4napfYXnGO8jtXfIsfc/mQapscXyaeqbTq44Ma1e0AVstXI\"",
- "nextPageToken"=>"CAUQAA",
- "pageInfo"=>{"totalResults"=>37, "resultsPerPage"=>5},
- "items"=>
-  [{"kind"=>"youtube#playlistItem",
-    "etag"=>"\"oyKLwABI4napfYXnGO8jtXfIsfc/N7m0-tKgFgKUKvPVMpiz_mHv4QI\"",
-    "id"=>"PL-RMUxm3Yz9oYyOh5ZupmaHAfNTM3Sgwz1gLWIg74Uu8",
-    "snippet"=>
-     {"publishedAt"=>"2015-04-07T19:10:06.000Z",
-      "channelId"=>"UCb--64Gl51jIEVE-GLDAVTg",
-      "title"=>"Ted Cruz Presidential Announcement Full Speech (C-SPAN)",
-      "description"=>
-       "Senator Ted Cruz (R-TX) declared his bid for the Republican presidential nomination. He made the announcement from Liberty University in Lynchburg, Virginia.  Watch the complete event here: http://cs.pn/1BIi6Wd",
-      "thumbnails"=>
-       {"default"=>{"url"=>"https://i.ytimg.com/vi/0N9H1SHL6Pg/default.jpg", "width"=>120, "height"=>90},
-        "medium"=>{"url"=>"https://i.ytimg.com/vi/0N9H1SHL6Pg/mqdefault.jpg", "width"=>320, "height"=>180},
-        "high"=>{"url"=>"https://i.ytimg.com/vi/0N9H1SHL6Pg/hqdefault.jpg", "width"=>480, "height"=>360}},
-      "channelTitle"=>"C-SPAN",
-      "playlistId"=>"PLf0o4wbW8SXqTSo6iJkolKCKJYBnpo9NZ",
-      "position"=>0,
-      "resourceId"=>{"kind"=>"youtube#video", "videoId"=>"0N9H1SHL6Pg"}},
-    "contentDetails"=>{"videoId"=>"0N9H1SHL6Pg"},
-    "status"=>{"privacyStatus"=>"public"}},
-   {"kind"=>"youtube#playlistItem",
-    "etag"=>"\"oyKLwABI4napfYXnGO8jtXfIsfc/9eeNNGxgA0aPjuBTlms4mCI6A3Q\"",
-    "id"=>"PL-RMUxm3Yz9oYyOh5ZupmaMYarC02wKIj7J52zN2bIkM",
-    "snippet"=>
-     {"publishedAt"=>"2015-04-07T19:10:35.000Z",
-      "channelId"=>"UCb--64Gl51jIEVE-GLDAVTg",
-      "title"=>"Senator Rand Paul Presidential Announcement Full Speech (C-SPAN)",
-      "description"=>
-       "Senator Rand Paul announced his bid for the Republican presidential nomination. He made the announcement from the Galt House Hotel in Louisville, KY.  Watch the complete Senator Rand Paul Presidential Campaign Announcement event here: http://cs.pn/1CQBsg7",
-      "thumbnails"=>
-       {"default"=>{"url"=>"https://i.ytimg.com/vi/iGfzoPQACPY/default.jpg", "width"=>120, "height"=>90},
-        "medium"=>{"url"=>"https://i.ytimg.com/vi/iGfzoPQACPY/mqdefault.jpg", "width"=>320, "height"=>180},
-        "high"=>{"url"=>"https://i.ytimg.com/vi/iGfzoPQACPY/hqdefault.jpg", "width"=>480, "height"=>360},
-        "standard"=>{"url"=>"https://i.ytimg.com/vi/iGfzoPQACPY/sddefault.jpg", "width"=>640, "height"=>480},
-        "maxres"=>{"url"=>"https://i.ytimg.com/vi/iGfzoPQACPY/maxresdefault.jpg", "width"=>1280, "height"=>720}},
-      "channelTitle"=>"C-SPAN",
-      "playlistId"=>"PLf0o4wbW8SXqTSo6iJkolKCKJYBnpo9NZ",
-      "position"=>1,
-      "resourceId"=>{"kind"=>"youtube#video", "videoId"=>"iGfzoPQACPY"}},
-    "contentDetails"=>{"videoId"=>"iGfzoPQACPY"},
-    "status"=>{"privacyStatus"=>"public"}},
-   {"kind"=>"youtube#playlistItem",
-    "etag"=>"\"oyKLwABI4napfYXnGO8jtXfIsfc/oiOd-KzKx1xvrpmS-VXD8PfNSdM\"",
-    "id"=>"PL-RMUxm3Yz9oYyOh5ZupmaJlMFfvd7_XzkIwJaHHWvug",
-    "snippet"=>
-     {"publishedAt"=>"2015-04-14T14:50:19.000Z",
-      "channelId"=>"UCb--64Gl51jIEVE-GLDAVTg",
-      "title"=>"Senator Marco Rubio Presidential Announcement Full Speech (C-SPAN)",
-      "description"=>
-       "Senator Marco Rubio announced his bid for the Republican presidential nomination. He made the announcement from the Freedom Tower in Miami, FL.  Watch the complete Senator Marco Rubio Presidential Campaign Announcement event here: http://cs.pn/1CQBsg7",
-      "thumbnails"=>
-       {"default"=>{"url"=>"https://i.ytimg.com/vi/51jmJn8XwPQ/default.jpg", "width"=>120, "height"=>90},
-        "medium"=>{"url"=>"https://i.ytimg.com/vi/51jmJn8XwPQ/mqdefault.jpg", "width"=>320, "height"=>180},
-        "high"=>{"url"=>"https://i.ytimg.com/vi/51jmJn8XwPQ/hqdefault.jpg", "width"=>480, "height"=>360}},
-      "channelTitle"=>"C-SPAN",
-      "playlistId"=>"PLf0o4wbW8SXqTSo6iJkolKCKJYBnpo9NZ",
-      "position"=>2,
-      "resourceId"=>{"kind"=>"youtube#video", "videoId"=>"51jmJn8XwPQ"}},
-    "contentDetails"=>{"videoId"=>"51jmJn8XwPQ"},
-    "status"=>{"privacyStatus"=>"public"}},
-   {"kind"=>"youtube#playlistItem",
-    "etag"=>"\"oyKLwABI4napfYXnGO8jtXfIsfc/qFTQEaBuNr2O4ngwK7DqXYzuTm8\"",
-    "id"=>"PL-RMUxm3Yz9oYyOh5ZupmaMKxKiGu8oTaA4jHSxlYWcA",
-    "snippet"=>
-     {"publishedAt"=>"2015-05-04T17:21:41.000Z",
-      "channelId"=>"UCb--64Gl51jIEVE-GLDAVTg",
-      "title"=>"Dr. Ben Carson Presidential Announcement Full Speech (C-SPAN)",
-      "description"=>
-       "Dr. Ben Carson announced his bid for the Republican presidential nomination. He made the announcement from the Music Hall Center for the Performing Arts in Detroit, MI. Watch the complete Dr. Ben Carson Presidential Campaign Announcement event here: http://cs.pn/1dHUn4J",
-      "thumbnails"=>
-       {"default"=>{"url"=>"https://i.ytimg.com/vi/ulsA8aFOkRs/default.jpg", "width"=>120, "height"=>90},
-        "medium"=>{"url"=>"https://i.ytimg.com/vi/ulsA8aFOkRs/mqdefault.jpg", "width"=>320, "height"=>180},
-        "high"=>{"url"=>"https://i.ytimg.com/vi/ulsA8aFOkRs/hqdefault.jpg", "width"=>480, "height"=>360}},
-      "channelTitle"=>"C-SPAN",
-      "playlistId"=>"PLf0o4wbW8SXqTSo6iJkolKCKJYBnpo9NZ",
-      "position"=>3,
-      "resourceId"=>{"kind"=>"youtube#video", "videoId"=>"ulsA8aFOkRs"}},
-    "contentDetails"=>{"videoId"=>"ulsA8aFOkRs"},
-    "status"=>{"privacyStatus"=>"public"}},
-   {"kind"=>"youtube#playlistItem",
-    "etag"=>"\"oyKLwABI4napfYXnGO8jtXfIsfc/JE_6RhmHEGo2cyMjyDE3iJdnsO8\"",
-    "id"=>"PL-RMUxm3Yz9oYyOh5ZupmaIYT8NBR2qCNaiav6D0NHjk",
-    "snippet"=>
-     {"publishedAt"=>"2015-05-05T17:55:55.000Z",
-      "channelId"=>"UCb--64Gl51jIEVE-GLDAVTg",
-      "title"=>"Mike Huckabee Presidential Announcement Full Speech (C-SPAN)",
-      "description"=>
-       "Former Governor Mike Huckabee announced his bid for the Republican presidential nomination. He made the announcement from the University of Arkansas Community College in Hope, Arkansas. Watch the complete Mike Huckabee Presidential Campaign Announcement event here: http://cs.pn/1GV0Ant",
-      "thumbnails"=>
-       {"default"=>{"url"=>"https://i.ytimg.com/vi/000uvNgzVrA/default.jpg", "width"=>120, "height"=>90},
-        "medium"=>{"url"=>"https://i.ytimg.com/vi/000uvNgzVrA/mqdefault.jpg", "width"=>320, "height"=>180},
-        "high"=>{"url"=>"https://i.ytimg.com/vi/000uvNgzVrA/hqdefault.jpg", "width"=>480, "height"=>360}},
-      "channelTitle"=>"C-SPAN",
-      "playlistId"=>"PLf0o4wbW8SXqTSo6iJkolKCKJYBnpo9NZ",
-      "position"=>4,
-      "resourceId"=>{"kind"=>"youtube#video", "videoId"=>"000uvNgzVrA"}},
-    "contentDetails"=>{"videoId"=>"000uvNgzVrA"},
-    "status"=>{"privacyStatus"=>"public"}}]}
+{
+  "kind"=>"youtube#playlistItemListResponse",
+  "etag"=>"\"Y3xTLFF3RLtHXX85JBgzzgp2Enw/MCz_ap6Y9BR_ibunvpafE1ZjXIE\"",
+  "nextPageToken"=>"CAUQAA",
+  "pageInfo"=>{"totalResults"=>267, "resultsPerPage"=>5},
+  "items"=>[
+    {
+      "kind"=>"youtube#playlistItem",
+      "etag"=>"\"Y3xTLFF3RLtHXX85JBgzzgp2Enw/x8-2YmAxAfU0imIaTp94VYq_95c\"",
+      "id"=>"LLtXXrrwE40nzXuU0m80zxnwBgspFzkfe3",
+      "snippet"=>{
+        "publishedAt"=>"2013-11-29T15:50:01.000Z",
+        "channelId"=>"UC9EHYsOnQY1r9ESVfjBPXmg",
+        "title"=>"Chris Christie - Obamacare is a Train Wreck",
+        "description"=>"Chris Christie - Obamacare is a Train Wreck",
+        "thumbnails"=>{
+          "default"=>{"url"=>"https://i.ytimg.com/vi/R7X-ODvI6I4/default.jpg","width"=>120,"height"=>90},
+          "medium"=>{"url"=>"https://i.ytimg.com/vi/R7X-ODvI6I4/mqdefault.jpg","width"=>320,"height"=>180},
+          "high"=>{"url"=>"https://i.ytimg.com/vi/R7X-ODvI6I4/hqdefault.jpg","width"=>480,"height"=>360}
+        },
+        "channelTitle"=>"Chris Christie",
+        "playlistId"=>"LL9EHYsOnQY1r9ESVfjBPXmg",
+        "position"=>0,
+        "resourceId"=>{"kind"=>"youtube#video", "videoId"=>"R7X-ODvI6I4"}
+      },
+      "contentDetails"=>{"videoId"=>"R7X-ODvI6I4"},
+      "status"=>{"privacyStatus"=>"public"}
+    },
+    {
+      "kind"=>"youtube#playlistItem",
+      "etag"=>"\"Y3xTLFF3RLtHXX85JBgzzgp2Enw/iU9B3VRA6IibsN_E-8lIeScw_F4\"",
+      "id"=>"LLtXXrrwE40nwpHx0eHbVNroJhzz8YGNoj",
+      "snippet"=>{
+        "publishedAt"=>"2013-11-27T03:50:35.000Z",
+        "channelId"=>"UC9EHYsOnQY1r9ESVfjBPXmg",
+        "title"=>"Chris Christie   The Democratic Mindset: There Is Never a Program That Can Be Cut",
+        "description"=> "Chris Christie   The Democratic Mindset: There Is Never a Program That Can Be Cut",
+        "thumbnails"=>{
+          "default"=>{"url"=>"https://i.ytimg.com/vi/vcE7O9qVLvs/default.jpg","width"=>120,"height"=>90},
+          "medium"=> {"url"=>"https://i.ytimg.com/vi/vcE7O9qVLvs/mqdefault.jpg","width"=>320,"height"=>180},
+          "high"=>{"url"=>"https://i.ytimg.com/vi/vcE7O9qVLvs/hqdefault.jpg","width"=>480,"height"=>360}
+        },
+        "channelTitle"=>"Chris Christie",
+        "playlistId"=>"LL9EHYsOnQY1r9ESVfjBPXmg",
+        "position"=>1,
+        "resourceId"=>{"kind"=>"youtube#video", "videoId"=>"vcE7O9qVLvs"}
+      },
+      "contentDetails"=>{"videoId"=>"vcE7O9qVLvs"},
+      "status"=>{"privacyStatus"=>"public"}
+    },
+    {
+      "kind"=>"youtube#playlistItem",
+      "etag"=>"\"Y3xTLFF3RLtHXX85JBgzzgp2Enw/sRl1z4T9TmuWNXo2FhpP-LUYjP8\"",
+      "id"=>"LLtXXrrwE40nz_2FIciT3ywhtpXxgNJ44v",
+      "snippet"=>{
+        "publishedAt"=>"2013-11-22T03:24:44.000Z",
+        "channelId"=>"UC9EHYsOnQY1r9ESVfjBPXmg",
+        "title"=>"Chris Christie   Education is the Defining Issue of Our Time",
+        "description"=>"Chris Christie   Education is the Defining Issue of Our Time",
+        "thumbnails"=>{
+          "default"=>{"url"=>"https://i.ytimg.com/vi/T3_jH07ywZg/default.jpg","width"=>120,"height"=>90},
+          "medium"=>{"url"=>"https://i.ytimg.com/vi/T3_jH07ywZg/mqdefault.jpg","width"=>320,"height"=>180},
+          "high"=>{"url"=>"https://i.ytimg.com/vi/T3_jH07ywZg/hqdefault.jpg", "width"=>480, "height"=>360},
+          "standard"=> {"url"=>"https://i.ytimg.com/vi/T3_jH07ywZg/sddefault.jpg","width"=>640,"height"=>480},
+          "maxres"=>{"url"=>"https://i.ytimg.com/vi/T3_jH07ywZg/maxresdefault.jpg","width"=>1280,"height"=>720}
+        },
+        "channelTitle"=>"Chris Christie",
+        "playlistId"=>"LL9EHYsOnQY1r9ESVfjBPXmg",
+        "position"=>2,
+        "resourceId"=>{"kind"=>"youtube#video", "videoId"=>"T3_jH07ywZg"}
+      },
+      "contentDetails"=>{"videoId"=>"T3_jH07ywZg"},
+      "status"=>{"privacyStatus"=>"public"}
+    },
+    {
+      "kind"=>"youtube#playlistItem",
+      "etag"=>"\"Y3xTLFF3RLtHXX85JBgzzgp2Enw/NLd7n_3vBblZyeRzs9pvQwfGxjU\"",
+      "id"=>"LLtXXrrwE40nyWcl_Eav3d8s_3wG8Lph72",
+      "snippet"=>{
+        "publishedAt"=>"2013-11-20T01:56:06.000Z",
+        "channelId"=>"UC9EHYsOnQY1r9ESVfjBPXmg",
+        "title"=> "Chris Christie - People Are Tired of Answers That All Sound The Same",
+        "description"=>"Chris Christie - People Are Tired of Answers That All Sound The Same",
+        "thumbnails"=>{
+          "default"=>{"url"=>"https://i.ytimg.com/vi/G73JEyrTBRs/default.jpg","width"=>120,"height"=>90},
+          "medium"=>{"url"=>"https://i.ytimg.com/vi/G73JEyrTBRs/mqdefault.jpg","width"=>320,"height"=>180},
+          "high"=>{"url"=>"https://i.ytimg.com/vi/G73JEyrTBRs/hqdefault.jpg","width"=>480,"height"=>360},
+          "standard"=>{"url"=>"https://i.ytimg.com/vi/G73JEyrTBRs/sddefault.jpg","width"=>640,"height"=>480},
+          "maxres"=>{"url"=>"https://i.ytimg.com/vi/G73JEyrTBRs/maxresdefault.jpg","width"=>1280,"height"=>720}},
+        "channelTitle"=>"Chris Christie",
+        "playlistId"=>"LL9EHYsOnQY1r9ESVfjBPXmg",
+        "position"=>3,
+        "resourceId"=>{"kind"=>"youtube#video", "videoId"=>"G73JEyrTBRs"}
+      },
+      "contentDetails"=>{"videoId"=>"G73JEyrTBRs"},
+      "status"=>{"privacyStatus"=>"public"}
+    },
+    {
+      "kind"=>"youtube#playlistItem",
+      "etag"=>"\"Y3xTLFF3RLtHXX85JBgzzgp2Enw/uLvQ7EW7OjGUW8AdhsYDkBHOWWI\"",
+      "id"=>"LLtXXrrwE40nx4c_JNFhaD9CaBhXn98Gqs",
+      "snippet"=>{
+        "publishedAt"=>"2013-08-04T22:29:28.000Z",
+        "channelId"=>"UC9EHYsOnQY1r9ESVfjBPXmg",
+        "title"=>"Chris Christie vs. Rand Paul (Full Exchange)",
+        "description"=>"Chris Christie vs. Rand Paul (Full Exchange)",
+        "thumbnails"=>{
+          "default"=>{"url"=>"https://i.ytimg.com/vi/80J1nBOm3rc/default.jpg","width"=>120,"height"=>90},
+          "medium"=>{"url"=>"https://i.ytimg.com/vi/80J1nBOm3rc/mqdefault.jpg","width"=>320,"height"=>180},
+          "high"=>{"url"=>"https://i.ytimg.com/vi/80J1nBOm3rc/hqdefault.jpg","width"=>480,"height"=>360},
+          "standard"=>{"url"=>"https://i.ytimg.com/vi/80J1nBOm3rc/sddefault.jpg","width"=>640,"height"=>480},
+          "maxres"=>{"url"=>"https://i.ytimg.com/vi/80J1nBOm3rc/maxresdefault.jpg","width"=>1280,"height"=>720}
+        },
+        "channelTitle"=>"Chris Christie",
+        "playlistId"=>"LL9EHYsOnQY1r9ESVfjBPXmg",
+        "position"=>4,
+        "resourceId"=>{"kind"=>"youtube#video", "videoId"=>"80J1nBOm3rc"}},
+      "contentDetails"=>{"videoId"=>"80J1nBOm3rc"},
+      "status"=>{"privacyStatus"=>"public"}
+    }
+  ]
+}
