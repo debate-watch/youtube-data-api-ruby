@@ -4,11 +4,6 @@ require "youtube_data_api/version"
 
 module YoutubeDataApi
 
-  #def self.parse(response)
-  #  raise "EXPECTING A GOOGLE API CLIENT RESPONSE" unless response.is_a?(Google::APIClient::Result)
-  #  result = JSON.parse(response.data.to_json)
-  #end
-
   #
   # CHANNELS
   #
@@ -23,13 +18,9 @@ module YoutubeDataApi
       :pageToken => options[:page_token]
     }
     if channel_url.include?(CHANNEL_URL_PREFIX)
-      request_params.merge!({
-        :id => channel_url.gsub(CHANNEL_URL_PREFIX,'')
-      })
+      request_params.merge!({:id => channel_url.gsub(CHANNEL_URL_PREFIX,'')})
     elsif channel_url.include?(USER_URL_PREFIX)
-      request_params.merge!({
-        :forUsername => channel_url.gsub(USER_URL_PREFIX,'')
-      })
+      request_params.merge!({:forUsername => channel_url.gsub(USER_URL_PREFIX,'')})
     else
       raise ChannelUrlError.new("could not recognize the channel_url #{channel_url}. try a url that contains either #{CHANNEL_URL_PREFIX} or #{USER_URL_PREFIX} ...")
     end
@@ -44,7 +35,6 @@ module YoutubeDataApi
   # @param [Hash] options
   # @param [Hash] options [String] api_key
   # @param [Hash] options [String] app_name
-  # @param [Hash] options [String] app_version
   # @param [Hash] options [String] app_version
   # @param [Hash] options [String] request_parts A comma separated string of response parts which you would like to request. Limit api usage by only requesting the parts you need.
   # @param [Hash] options [String] page_token

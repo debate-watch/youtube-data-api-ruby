@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["MJ Rossetti (@s2t2)"]
   spec.email         = ["s2t2mail+git@gmail.com"]
 
-  spec.summary       = %q{A ruby library for parsing data from the YouTube Data API.}
-  spec.description   = %q{A ruby library for parsing data from the YouTube Data API. Parses channel, playlist, and video data.}
+  spec.summary       = %q{A ruby library interface to the YouTube Data API.}
+  spec.description   = %q{A ruby library interface to the YouTube Data API. Parses channel, playlist, and video data.}
   spec.homepage      = "https://github.com/debate-watch/youtube-data-api-ruby"
   spec.license       = "MIT"
 
