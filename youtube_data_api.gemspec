@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{A ruby library interface to the YouTube Data API.}
   spec.description   = %q{A ruby library interface to the YouTube Data API. Parses channel, playlist, and video data.}
-  spec.homepage      = "https://github.com/debate-watch/youtube-data-api-ruby"
+  spec.homepage      = "https://github.com/data-creative/youtube-data-api-ruby"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }

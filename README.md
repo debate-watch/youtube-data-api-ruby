@@ -111,7 +111,7 @@ YoutubeDataApi.channel(channel_url, options)
 
 ## Contributing
 
-Browse existing [issues](https://github.com/debate-watch/youtube-data-api-ruby/issues) or create a new issue to communicate bugs, desired features, etc.
+Browse existing [issues](https://github.com/data-creative/youtube-data-api-ruby/issues) or create a new issue to communicate bugs, desired features, etc.
  After forking the repo and pushing your changes, create a pull request referencing the applicable issue(s).
 
 ### Developing
